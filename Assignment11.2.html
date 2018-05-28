@@ -1,0 +1,30 @@
+<!-- This assignment helps to master the concept of DOM API -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment11.2</title>
+</head>
+<body>
+    <table id="dynamic-table" border="1">
+    </table>
+    <br>
+    <!-- Calling the addrowtotable function on click of the button "Add row" -->
+    <input type="button" value="Add row" onclick="return addrowtotable()"> 
+    <script>
+        function addrowtotable() //Js function to add rows to a table
+        {
+            var table = document.getElementById("dynamic-table");
+            var row = table.insertRow(0);  //Inserting a row
+            
+            var cell1 = row.insertCell(0); //Inserting two cells
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "CELL1";
+            cell2.innerHTML = "CELL2";
+
+        }
+    </script>
+</body>
+</html>
